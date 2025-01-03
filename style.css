@@ -177,45 +177,52 @@ button {
 
 
 .feature {
-    width: 100vw;
-    height: 80vh;
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: clamp(50px, 8vw, 100px);
-    padding-bottom: clamp(50px, 10vw, 150px);
+    align-items: center;
+    padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .feature-box {
   display: flex;
-  width: 100%;
   max-width: 1200px;
-  height: 600px;
-  padding-top: clamp(20px, 5vw, 40px);
+  min-height: 700px;
+  padding-top: 40px;
   
 }
 
 .feature-box-left {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  
+  width: 50%;
+ 
 }
 
 .img-left1,
 .img-left2 {
-  width: 300px;
+  width: 340px;
   height: 380px;
   border-radius: 40px;
+  object-fit: cover;
 }
 
 .img-left1 {
 position: absolute;
 left: 170px;
+right: 200px;
+  top: 90px;
 }
 
 
 video {
+  position: absolute;
   object-fit: cover;
   border-radius: 40px;
+  top: 250px;
+  left: 20px;
   
 }
 
@@ -227,7 +234,7 @@ video {
 
 .feature-box-right h2 {
   text-transform: uppercase;
-  font-size: clamp(20px, 2vw, 25px);
+  font-size: clamp(15px, 2vw, 25px);
   font-weight: 800;
   margin-bottom: 20px;
 }
@@ -247,36 +254,11 @@ video {
 
 .program {
   width: 236px;
-  min-height: 52px;
+  height: 52px;
   margin-top: 10px;
 }
 
-.feature-box-left {
-  width: 50%;
 
-  position: relative;
-}
-
-.img-left1,
-.img-left2 {
-  width: 300px;
-  height: 380px;
-  border-radius: 40px;
-}
-
-.img-left1 {
-  position: absolute;
-  right: 200px;
-  top: 90px;
-}
-
-video {
-  object-fit: cover;
-  border-radius: 40px;
-  position: absolute;
-  top: 240px;
-  left: 20px;
-}
 
 
 
@@ -294,7 +276,7 @@ video {
   justify-content: center;
   gap: 100px;
   height: 70vh;
-  margin-top: clamp(20px, 8vw, 100px);
+  
   padding-left: clamp(50px, 8vw, 100px);
   padding-top: 40px;
 }
@@ -334,7 +316,7 @@ margin-top: 10px;
   align-items: center;
 }
 
-.price {
+.priice {
   width: 236px;
   height: 52px;
   margin: 40px 0;
@@ -389,6 +371,7 @@ margin-top: 10px;
 
 .popular-container {
   padding: 80px 50px;
+  overflow-x: hidden;
 }
 
 .popular-title {
@@ -411,12 +394,13 @@ margin-top: 10px;
 
 .popular-content {
   display: flex;
+  
   justify-content: center;
   align-items: center;
   margin-top: 50px;
   gap: 20px;
-  width: 1200px;
   height: 500px;
+  transition: 0.3s ease;
 }
 
 .content-img {
@@ -427,7 +411,8 @@ margin-top: 10px;
 .img-size {
   width: 360px;
   height: 450px;
-  border-radius: 25px;
+  border-radius: 30px;
+  transition: 0.3s ease-in-out;
 }
 
 .rating {
@@ -440,6 +425,7 @@ margin-top: 10px;
   height: 32px;
   border-radius: 4px 0px 0px 4px;
   padding: 4px 8px 4px 8px;
+  transition: 0.3s ease-in-out;
 }
 
 .rating p {
@@ -447,16 +433,16 @@ margin-top: 10px;
 }
 
 .animation {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.274);
   position: absolute;
   bottom: 0;
   left: 180px;
   width: 360px;
-  height: 450px;
-  border-radius: 25px;
+  
+  border-radius: 30px;
   height: 100%;
   padding: 20px 20px 20px;
-  transform: translateX(-50%) translateY(85%);
+  transform: translateX(-50%) translateY(83%);
   transition: 1.5s ease;
   backdrop-filter: blur(6px);
 }
@@ -474,9 +460,9 @@ margin-top: 10px;
 
 .animation-title h3 {
   font-weight: 700;
-  font-size: 20px;
-  
+  font-size: 19px;
   color: white;
+  white-space: nowrap;
 }
 
 .animation-title p {
@@ -496,8 +482,8 @@ margin-top: 10px;
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.3);
-  width: 86px;
-  height: 40px;
+  width: 80px;
+  height: 33px;
   border-radius: 4px;
 }
 .price p {
@@ -510,7 +496,7 @@ margin-top: 10px;
 .info-price p {
   color: white;
   margin-top: 35px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .info-price button {
